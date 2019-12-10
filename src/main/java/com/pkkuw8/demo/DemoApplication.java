@@ -10,8 +10,8 @@ import java.io.IOException;
 public class DemoApplication {
 
 	public static void main(String[] args) throws IOException {
-		DataFromWikampDownloader.test();
-		//SpringApplication.run(DemoApplication.class, args);
+//		DataFromWikampDownloader.test();
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }
