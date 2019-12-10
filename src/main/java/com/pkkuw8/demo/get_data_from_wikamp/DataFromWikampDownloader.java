@@ -18,14 +18,15 @@ public class DataFromWikampDownloader {
     private String url = "https://adm.edu.p.lodz.pl/user/users.php";
 
     public static File test(String user, String login, String password) throws IOException {
-        URL url = new URL("https://weeia.edu.p.lodz.pl/login/index.php?authCAS=CAS&wantsurl=%2F");
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-        connection.setRequestMethod("POST");
-
-        DataOutputStream out = new DataOutputStream(connection.getOutputStream());
-        out.writeBytes("username=" + login + "&password=" + password + "&submit=LOGIN&lt=LT-bc78c3ef-f087-ec66-4550-62dc5abb688dZe3s1&_eventId=submit");
-
-        connection.disconnect();
+//        URL url = new URL("https://weeia.edu.p.lodz.pl/login/index.php?authCAS=CAS&wantsurl=%2F");
+//        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//        connection.setRequestMethod("POST");
+//
+//        DataOutputStream out = new DataOutputStream(connection.getOutputStream());
+//        out.writeBytes("username=" + login + "&password=" + password + "&submit=LOGIN&lt=LT-bc78c3ef-f087-ec66-4550-62dc5abb688dZe3s1&_eventId=submit");
+//
+//        connection.disconnect();
+        
         Document doc = Jsoup.connect("https://adm.edu.p.lodz.pl/user/users.php?search=" + user)
                 .get();
 
