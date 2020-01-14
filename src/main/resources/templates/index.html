@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>vCard</title>
+</head>
+<body>
+    <input id="text_input" type="text" />
+    <input type="button" value="get" onclick="getData()"/>
+
+    <script>
+        function getData(){
+            window.location.href = (window.location.href + "getDataFromWikamp?user=" + document.getElementById("text_input").value);
+        }
+    </script>
+</body>
+</html>

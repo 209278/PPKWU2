@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>results</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <div th:each="entry : *{entries}">
+        <h2 th:text="${entry.fullName}"></h2>
+        <h3 th:text="${entry.institute}"></h3>
+        <a th:attr="href=${entry.vCard}">vCard</a>
+    </div>
+</body>
+</html>
